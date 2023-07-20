@@ -7,13 +7,25 @@ let personalMovieDB = {
 	genres: [],
 	privat: false
 };
-let lastOneViewedFilm = prompt("Один из последних просмотренных фильмов?", "");
-let scoreOneFilm = +prompt("На сколько оцените его?", "");
-let lastTwoViewedFilm = prompt("Один из последних просмотренных фильмов?", "");
-let scoreTwoFilm = +prompt("На сколько оцените его?", "");
-let lastThreeViewedFilm = prompt("Один из последних просмотренных фильмов?", "");
-let scoreThreeFilm = +prompt("На сколько оцените его?", "");
-personalMovieDB["movies"][lastOneViewedFilm] = scoreOneFilm;
-personalMovieDB["movies"][lastTwoViewedFilm] = scoreTwoFilm;
-personalMovieDB["movies"][lastThreeViewedFilm] = scoreThreeFilm;
+
+
+let i = 0;
+
+// while(i < 3) {
+// 	let lastViewedFilm = prompt("Один из последних просмотренных фильмов?", "");
+// 	let scoreFilm = +prompt("На сколько оцените его?", "");
+// 	if(lastViewedFilm !== "" && lastViewedFilm !== null && lastViewedFilm.length < 50) {
+// 		personalMovieDB["movies"][lastViewedFilm] = scoreFilm;
+// 		i++;
+// 	}
+// }	
+if(personalMovieDB["count"] < 10) {
+	alert("Просмотрено довольно мало фильмов");
+} else if(personalMovieDB["count"] >= 10 && personalMovieDB["count"] <= 30) {
+	alert("Вы классический зритель");
+} else if(personalMovieDB["count"] > 30) {
+	alert("Вы киноман");
+} else {
+	alert("Произошла ошибка");
+}
 console.log(personalMovieDB);
