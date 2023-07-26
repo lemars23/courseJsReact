@@ -20,7 +20,7 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
 	for(let i = 0;i < 2;) {
-		let lastViewedFilm = prompt("Один из последних просмотренных фильмов?", "");
+		let lastViewedFilm = prompt("Один из последних просмотренных фильмов?", "").trim();
 		let scoreFilm = +prompt("На сколько оцените его?", "");
 		if(lastViewedFilm !== "" && scoreFilm !== "" && !isNaN(scoreFilm) && scoreFilm !== 0 && lastViewedFilm !== null && lastViewedFilm.length < 50) {
 			personalMovieDB["movies"][lastViewedFilm] = scoreFilm;
@@ -68,4 +68,3 @@ writeYourGenres();
 
 showMyDB();
 
-console.log(typeof(123));

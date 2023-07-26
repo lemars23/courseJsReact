@@ -20,38 +20,14 @@ function returnString(str) {
 	let arrString = str.split(/-|_/);
 	let lengthArr = arrString.length;
 	let res = "";
-
-	for(let i = 0; i < lengthArr; i++) {
-		if(i != 0) {
-			let firstLatterCase = arrString[i][0].toUpperCase();
-			let anotherCases = arrString[i].substring(1);
-			res += firstLatterCase + anotherCases;
-		} else {
-			res += arrString[i].toLowerCase();
-		}
+	res += arrString[0];
+	for(let i = 1; i < lengthArr; i++) {
+		let firstLatterCase = arrString[i][0].toUpperCase();
+		let anotherCases = arrString[i].substring(1);
+		res += firstLatterCase + anotherCases;
 	}
-
-
 	return res;
 }
 
-let str = returnString("The-Stealth-Warrior");
+let str = returnString("the-Stealth-Warrior");
 console.log(str);
-
-function toCamelCase(str){
-	let arrString = str.split(/-|_/);
-	  let lengthArr = arrString.length;
-	  let res = "";
-  
-	  for(let i = 0; i < lengthArr; i++) {
-			  let firstLatterCase = arrString[i][0];
-			  let anotherCases = arrString[i].substring(1);
-			  res += firstLatterCase + anotherCases;
-		  
-	  }
-  
-  
-	  return res;
-}
-
-console.log(toCamelCase("The-Stealth-Warrior"));
