@@ -67,3 +67,5 @@ function writeYourGenres() {
 writeYourGenres();
 
 showMyDB();
+
+console.log(typeof(123));
