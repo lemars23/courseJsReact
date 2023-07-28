@@ -31,7 +31,7 @@ function rememberMyFilms() {
 		}
 	}
 }
-// rememberMyFilms();
+rememberMyFilms();
 
 function detectPersonalLevel() {
 	if(personalMovieDB["count"] < 10) {
